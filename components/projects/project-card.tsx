@@ -17,8 +17,8 @@ const ProjectCard: React.FC<ProjectType> = ({
           src={imageUrl ?? imagePlaceholder}
           alt={`my ${title} image`}
           width={300}
-          height={300}
-          className="rounded-lg h-[300px] w-[200px]  tablet:h-[250px] tablet:w-[200px] laptop:w-[270px] laptop:h-[370px]"
+          height={200}
+          className="rounded-lg h-[300px] w-[200px]  tablet:h-[250px] tablet:w-[200px] laptop:w-[270px] laptop:h-[270px]"
         />
       </div>
 

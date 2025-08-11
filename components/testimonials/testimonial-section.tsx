@@ -22,9 +22,7 @@ const TestimonialsSection = () => {
     >
       <h1 className="text-3xl tablet:text-3xl mb-0">Testimonials</h1>
       <p className=" tablet:px-[100px]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsam
-        a tempore sapiente, nobis labore atque, corrupti rerum itaque unde neque
-        fugit eos similique quasi odio quo laudantium, minus sunt.
+    Hear what clients and collaborators say about my work, professionalism, and dedication to delivering quality mechanical engineering and web solutions.
       </p>
       <Swiper
         modules={[Navigation, Pagination]}

@@ -20,9 +20,7 @@ const ProjectSection = () => {
     >
       <h1 className="text-3xl tablet:text-3xl mb-0">My Projects</h1>
       <p className=" tablet:px-[100px]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsam
-        a tempore sapiente, nobis labore atque, corrupti rerum itaque unde neque
-        fugit eos similique quasi odio quo laudantium, minus sunt.
+       I have completed diverse projects involving mechanical design, 3D modeling, and interactive web applications, showcasing my skills in CAD software and modern web technologies.
       </p>
       <div className="flex flex-wrap justify-start gap-x-3 gap-y-2 tablet:gap-3 tablet:p-2">
         {allSkills.map((skill, index) => (

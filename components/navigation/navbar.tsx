@@ -35,7 +35,7 @@ const Navbar = () => {
     <header
       className={`min-w-full flex items-center justify-center gap-[40px] tablet:gap-[20px] laptop:gap-[50px] ${
         isScrolled
-          ? " bg-gainsboro-200 dark:bg-gray-100 pt-3 pb-2 z-50 fixed top-0 transition ease-in-out duration-700 "
+          ? " bg-blue-200 dark:bg-gray-100 pt-3 pb-2 z-50 fixed top-0 transition ease-in-out duration-700 "
           : " dark:text-white"
       }`}
     >

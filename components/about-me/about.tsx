@@ -34,9 +34,7 @@ const AboutMe = () => {
             </h1>
             <div className="flex flex-col items-start justify-start gap-5 tablet:min-w-[300px]">
               <p className="flex  text-left leading-relaxed tracking-normal">
-                Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa
-                nibh lectus netus in. Aliquet donec morbi convallis pretium.
-                Turpis tempus pharetra
+               Mechanical Engineer skilled in designing and optimizing mechanical systems using CAD and analysis tools. I focus on practical, efficient solutions and enjoy tackling engineering challenges with creativity and precision.
               </p>
               <div className="flex flex-col items-start justify-center gap-[7px] tablet:text-md">
                 {isLoading ? (

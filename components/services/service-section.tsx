@@ -13,9 +13,7 @@ const ServiceSection = () => {
     >
       <h1 className="text-3xl tablet:text-3xl mb-0">Services</h1>
       <p className=" tablet:px-[100px]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsam
-        a tempore sapiente, nobis labore atque, corrupti rerum itaque unde neque
-        fugit eos similique quasi odio quo laudantium, minus sunt.
+      I offer expert mechanical design and visualization services using SolidWorks, CATIA Composer, and Revit. Additionally, I create interactive 3D web experiences with Three.js and build modern web apps using Next.js.
       </p>
       <div className=" flex flex-col gap-3 tablet:flex-row">
         {isLoading ? (

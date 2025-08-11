@@ -9,7 +9,7 @@ const desktopClassName =
 
 const FooterSection = () => {
   return (
-    <footer className="w-full flex flex-col justify-center items-center gap-10 dark:text-white mt-[100px] pt-7 bg-gray-900">
+    <footer className="w-full flex flex-col justify-center items-center gap-10 dark:text-white mt-[100px] pt-7 bg-blue-200">
       <div className="flex flex-col items-center justify-center">
         <div className="flex items-center justify-center box-border gap-2 desktop:gap-5">
           <Image

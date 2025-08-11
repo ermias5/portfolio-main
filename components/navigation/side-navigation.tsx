@@ -45,7 +45,7 @@ const SideNav = () => {
             </div>
           </div>
           <div className="flex justify-center font-bold border-b-2 border-blue-600 pb-7 ">
-            Ephrem Mekuria
+            Ermias Alehegn
           </div>
           <div className="pt-10">
             <div className="flex flex-col items-start justify-start cursor-pointer gap-7">
