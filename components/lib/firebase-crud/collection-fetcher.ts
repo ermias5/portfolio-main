@@ -18,7 +18,6 @@ export async function fetchFirestoreCollection<T>(
   const q = query(
     collectionRef,
     orderBy("createdAt", "desc"),
-    limit(limitNumber)
   );
   try {
     const querySnapshot = await getDocs(q);

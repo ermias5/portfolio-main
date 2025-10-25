@@ -1,7 +1,9 @@
 "use client";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import useProjectData, { ProjectType } from "../../hooks/useProjectData";
 import ProjectCard from "./project-card";
+import { useEffect, useState } from "react";
 
 const ProjectSection = () => {
   const {
@@ -12,6 +14,39 @@ const ProjectSection = () => {
     allSkills,
     setSelectedSkill,
   } = useProjectData({ itemQuantity: 3 });
+
+
+  // add useEffect to imports: import { useState, useEffect } from "react";
+  const [paginatedProjects, setPaginatedProjects] = useState<ProjectType[]>(
+    () => filteredProjects.slice(0, 3)
+  );
+
+  useEffect(() => {
+    setPaginatedProjects(filteredProjects.slice(0, 3));
+  }, [filteredProjects]);
+
+  const handlePaginate = (direction: "next" | "prev") => {
+    if (filteredProjects.length === 0) return;
+
+    const first = paginatedProjects[0];
+    const currentIndex =
+      first != null ? filteredProjects.findIndex((p) => p.id === first.id) : 0;
+
+    if (currentIndex === -1) {
+      setPaginatedProjects(filteredProjects.slice(0, 3));
+      return;
+    }
+
+    const pageSize = Math.min(3, filteredProjects.length);
+    let newIndex =
+      direction === "next"
+        ? Math.min(currentIndex + pageSize, Math.max(0, filteredProjects.length - pageSize))
+        : Math.max(currentIndex - pageSize, 0);
+
+    setPaginatedProjects(filteredProjects.slice(newIndex, newIndex + pageSize));
+  };
+
+
 
   return (
     <section
@@ -38,12 +73,19 @@ const ProjectSection = () => {
         ))}
       </div>
       <div className="flex flex-col gap-7 pt-[2rem] tablet:flex-row">
+        <div className="flex flex-col justify-center items-center">
+          {
+            filteredProjects.length > 3 && (
+              <ChevronLeft className="h-12 w-12" onClick={() => handlePaginate('prev')} />
+            )
+          }
+        </div>
         {isLoading ? (
           <p>Loading</p>
         ) : error ? (
           <p>getting error when fetching the data</p>
         ) : (
-          filteredProjects.map((project: ProjectType) => (
+          paginatedProjects.map((project: ProjectType) => (
             <ProjectCard
               key={project.id}
               imageUrl={project.imageUrl}
@@ -53,6 +95,13 @@ const ProjectSection = () => {
             />
           ))
         )}
+         <div className="flex flex-col justify-center items-center">
+          {
+            filteredProjects.length > 3 && (
+              <ChevronRight className="h-12 w-12 hover:cursor-pointer" onClick={() => handlePaginate('next')} />
+            )
+          }
+        </div>
       </div>
     </section>
   );

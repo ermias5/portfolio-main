@@ -11,9 +11,9 @@ const Hero = () => {
   const { data, isLoading, error } = useHeroData({ itemQuantity: 1 });
   return (
     <>
-      <div className="fixed flex items-center justify-center top-40 left-4 cursor-pointer tablet:top-40 tablet:left-8 laptop:top-60 laptop:left-20">
+      {/* <div className="fixed flex items-center justify-center top-40 left-4 cursor-pointer tablet:top-40 tablet:left-8 laptop:top-60 laptop:left-20">
         <ToggleTheme />
-      </div>
+      </div> */}
       <div
         id="hero"
         className={`flex flex-col-reverse items-center justify-center px-[5%]  pt-[10%]  gap-10 font- dark:text-white tablet:flex-row tablet:gap-[140px] tablet:px-[20%] desktop:px-[20%] desktop:pt-[10%] `}
